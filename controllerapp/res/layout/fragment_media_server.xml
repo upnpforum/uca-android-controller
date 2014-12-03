@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mediaserver_headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/statusBarBackgroundMain"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/back_button" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/settingImage"
+            android:layout_toRightOf="@+id/backButton"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mediaserver_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="@string/app_name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/mediaserver_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#c1ffbf"
+                android:text=""
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/optionsMenuImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/options_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/mediaserver_file_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/mediaserver_file_properties_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/mediaserver_mediarenderers_spinner_separator" 
+                android:divider="@drawable/file_property_divider"
+                android:dividerHeight="1px" >
+            </ListView>
+
+            <View 
+                android:id="@+id/mediaserver_mediarenderers_spinner_separator"
+                android:background="#bababa" 
+                android:layout_width="match_parent"
+                android:layout_above="@+id/mediaserver_mediarenderers_spiner" 
+                android:layout_height="2px"/>
+            <Spinner
+                android:id="@+id/mediaserver_mediarenderers_spiner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/mediaserver_file_buttons" 
+                android:layout_margin="7dp"/>
+
+            <LinearLayout 
+                android:id="@+id/mediaserver_file_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:paddingBottom="10dp" >
+
+                <ImageButton
+                    android:id="@+id/button_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/button_play_states"
+                    android:layout_marginRight="3dp"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/button_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/button_schedule_states"
+                    android:layout_marginLeft="3dp"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/mediaserver_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            android:visibility="invisible" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/mediaserver_not_connected_info"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/device_is_not_connected"
+            android:textColor="#000"
+            android:visibility="invisible" >
+        </TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

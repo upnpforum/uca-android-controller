@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IBC Demo Controller</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_content"><![CDATA[
+        <h1>IBC Demo Controller</h1>  
+               IBC Demo UPnP Control Point application, v1.2<br/><br/>
+               <br />
+               Play designed by Björn Andersson licesed on CC-BY 3.0 license (https://creativecommons.org/licenses/by/3.0/) <br /><br />
+               Server designed by Sergio Luna licesed on CC-BY 3.0 license (https://creativecommons.org/licenses/by/3.0/) <br /><br />
+               Control Point designed by Benny Forsberg licesed on CC-BY 3.0 license (https://creativecommons.org/licenses/by/3.0/) <br /><br />
+              ]]>    </string>
+    <string name="prefs_local_polling">Use polling</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="cp_name">Control Point name</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="server">Server</string>
+    <string name="port">Port</string>
+    <string name="pubsub">PubSub Service</string>
+    <string name="device_is_not_connected">Device is not connected</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="root_directory_name">Root dir</string>
+    <string name="uuid">uuid</string>
+    <string name="accompanying_devices">Accompanying Devices Picker</string>
+    <string name="accompanying_content">Set Accompanying Content</string>
+    <string name="accompanying_content_set_successfuly">Accompanying content set successfuly</string>
+    <string name="accompanying_content_missing">Accompanying content was not set. Browse Media Server to set accompanying content first.</string>
+</resources>

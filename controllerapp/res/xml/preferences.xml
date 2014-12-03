@@ -1,0 +1,83 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 
+    <PreferenceCategory android:title="Local connection options" >
+        <CheckBoxPreference
+            android:capitalize="none"
+            android:defaultValue="true"
+            android:enabled="false"
+            android:key="local_use_pooling"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/prefs_local_polling" />
+    </PreferenceCategory>
+    -->
+    <PreferenceCategory android:title="Control point options">
+        <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue="Control Point"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:key="xmpp_cp_name"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/cp_name" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="XMPP connection options" >
+        <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue="upnpcloud.comarch.com"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:key="xmpp_login"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/login" />
+        <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue=""
+            android:inputType="textNoSuggestions|textPassword"
+            android:key="xmpp_password"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/password" />
+        <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue="@string/pref_default_server"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:key="xmpp_server"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/server" />
+        <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue="@string/pref_default_port"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:key="xmpp_port"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/port" />
+       <EditTextPreference
+            android:capitalize="none"
+            android:defaultValue="pubsub.upnpcloud.comarch.com"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:key="xmpp_pubsub"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pubsub" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other" >
+        <Preference
+            android:key="clear_cache"
+            android:title="Clear cache" />
+        <Preference
+            android:key="reset_demo"
+            android:title="Reset demo" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

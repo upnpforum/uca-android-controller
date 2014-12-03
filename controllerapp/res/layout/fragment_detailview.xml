@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".BulbListActivity"
+    android:weightSum="10" >
+
+    <LinearLayout
+        android:id="@+id/headerBarDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp" >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/back_button" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/titleTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text=""
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/jidTextDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#c1ffbf"
+                android:text=""
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <com.comarch.android.upnp.ibcdemo.ui.newview.widgets.BulbConnectionView
+        android:id="@+id/bulbConnectionView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.84" />
+    
+    <RelativeLayout
+        android:id="@+id/colorPickerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"  >
+
+        <com.comarch.android.upnp.ibcdemo.ui.newview.widgets.ColorPickerView
+            android:id="@+id/colorPickerView"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jogView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6" >
+
+
+            <com.comarch.android.upnp.ibcdemo.ui.newview.widgets.RotaryKnobView
+                android:id="@+id/knob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/bulb_detail_not_connected_info"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:text="@string/device_is_not_connected" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bulb_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

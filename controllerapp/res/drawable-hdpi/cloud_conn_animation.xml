@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false" >
+    <item android:drawable="@drawable/cloud_ing_0" android:duration="100" />
+    <item android:drawable="@drawable/cloud_ing_1" android:duration="100" />
+    <item android:drawable="@drawable/cloud_ing_2" android:duration="100" />
+    <item android:drawable="@drawable/cloud_ing_3" android:duration="100" />
+    <item android:drawable="@drawable/cloud_ing_4" android:duration="100" />
+    <item android:drawable="@drawable/cloud_ing_5" android:duration="100" />
+</animation-list>

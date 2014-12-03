@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+
+    
+    <string name="pref_header_xmpp">Xmpp settings</string>
+    <string name="pref_default_port">5222</string>
+    <string name="pref_default_server">upnpcloud.comarch.com</string>
+
+</resources>

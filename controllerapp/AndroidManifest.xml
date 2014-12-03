@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.comarch.android.upnp.ibcdemo"
+    android:versionCode="13"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- cling requirements -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- end of cling requirements -->
+    <application
+        android:name="com.comarch.android.upnp.ibcdemo.IbcDemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.comarch.android.upnp.ibcdemo.ui.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.comarch.android.upnp.ibcdemo.ui.newview.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="false" >
+        </activity>
+        <activity
+            android:name="com.comarch.android.upnp.ibcdemo.ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.comarch.android.upnp.ibcdemo.ui.BulbListActivity" 
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comarch.android.upnp.ibcdemo.ui.BulbListActivity" />
+        </activity>
+        <activity
+            android:name="com.comarch.android.upnp.ibcdemo.ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comarch.android.upnp.ibcdemo.ui.BulbListActivity" />
+        </activity>
+
+        <service android:name="com.comarch.android.upnp.ibcdemo.connectivity.ConnectivityService" />
+        
+        <service android:name="com.comarch.android.upnp.ibcdemo.connectivity.local.LocalUpnpService" />
+        
+        
+    </application>
+
+</manifest>

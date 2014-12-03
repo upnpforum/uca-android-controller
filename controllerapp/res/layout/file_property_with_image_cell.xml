@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="72dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp" >
+    
+    <ImageView
+        android:id="@+id/fileproperty_image"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+     />
+        
+    <TextView
+        android:id="@+id/fileproperty_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/fileproperty_image"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/filePropertyLabel"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fileproperty_line2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fileproperty_line1"
+        android:layout_toRightOf="@id/fileproperty_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/filePropertyValue"
+        android:textSize="20sp" />
+</RelativeLayout>

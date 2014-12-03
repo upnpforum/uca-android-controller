@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/schedule_button_dissabled" android:state_enabled="false"/>
+    <item android:drawable="@drawable/schedule_button_pressed" android:state_pressed="true"/>
+    <item android:drawable="@drawable/schedule_button"/>
+
+</selector>

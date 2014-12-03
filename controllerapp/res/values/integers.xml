@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splashBackgroundStart">#294665</color>
+    <color name="splashBackgroundEnd">#6DBF6A</color>
+    <color name="statusBarBackgroundDetail">#6dbf6a</color>
+    <color name="statusBarBackgroundMain">#234161</color>
+    <color name="bulbNameAvailable">#818990</color>
+    <color name="bulbNameNotAvailable">#eeeeee</color>
+    
+    <color name="filePropertyLabel">#5e686f</color>
+    <color name="filePropertyValue">#081d30</color>
+</resources>
