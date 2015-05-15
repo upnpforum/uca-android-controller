@@ -190,6 +190,7 @@ public class MediaServerFragment extends FragmentWithBusDeliverer implements OnI
         
         if(parentDirectory == null){
             mCallback.browseMediaServerDirectory(mediaServer,root.getId(),root.getParentId());
+            mCallback.getProtocolInfo(mediaServer);
         }
     }
     

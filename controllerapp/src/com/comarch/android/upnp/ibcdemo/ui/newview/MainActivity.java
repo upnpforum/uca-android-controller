@@ -470,6 +470,14 @@ public class MainActivity extends ActivityWithBusDeliverer implements Callback{
         Log.i(TAG, "browseMediaServer " + dirId + " parent " + parentId);
         mBroker.onBrowseMediaServer(mediaServer, dirId, parentId);
     }
+
+    @Override
+    public void getProtocolInfo(SourcedDeviceUpnp sourcedDeviceUpnp) {
+        if(sourcedDeviceUpnp != null){
+            Log.i(TAG, "getProtocolInfo " + sourcedDeviceUpnp.getDescription().getJid());
+            mBroker.onAVGetProtocolInfo(sourcedDeviceUpnp);
+        }
+    }
     
     @Override
     public void performMediaRendererAction(MediaRenderer mediaRenderer,String actionName, Map<String, String> args) {

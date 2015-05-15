@@ -161,6 +161,7 @@ public class MediaRendererFragment extends FragmentWithBusDeliverer{
         mAccompanyingAdapter = new AccompanyingDevicesAdapter(getActivity(), mCallback.getUpnpDevices());
         mAccompanyingAdapter.setCurrentDevice(mCallback.getCurrentDevice());
         mAccompanyingListView.setAdapter(mAccompanyingAdapter);
+        mCallback.getProtocolInfo(mCallback.getCurrentDevice());
         redrawDeviceState();
     }
     

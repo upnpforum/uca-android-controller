@@ -41,6 +41,7 @@ import com.comarch.android.upnp.ibcdemo.busevent.connector.data.MediaServerBrows
 import com.comarch.android.upnp.ibcdemo.connectivity.common.UpnpActionCallback;
 import com.comarch.android.upnp.ibcdemo.connectivity.local.busevent.ClingServiceActionEvent;
 import com.comarch.android.upnp.ibcdemo.connectivity.local.busevent.ClingServiceActionEvent.Service;
+import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppAVTGetProtocolInfoEvent;
 import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppMediaServerBrowseEvent;
 import com.comarch.android.upnp.ibcdemo.model.MediaRenderer;
 import com.comarch.android.upnp.ibcdemo.model.MediaServer;
@@ -69,6 +70,7 @@ public class Broker {
 	        args.put("Filter", "*");
 	        args.put("StartingIndex", "0");
 	        args.put("RequestedCount", "0");
+	        args.put("SortCriteria", "");
 	        UpnpActionCallback callback = new UpnpActionCallback() {
 				
 				@Override
@@ -83,7 +85,10 @@ public class Broker {
 			};
 			bus.post(new ClingServiceActionEvent(mediaServer,new Service("schemas-upnp-org","ContentDirectory"),"Browse",args,callback));
 		}
-        
+    }
+
+    public void onAVGetProtocolInfo(final SourcedDeviceUpnp sourcedDeviceUpnp) {
+        bus.post(new XmppAVTGetProtocolInfoEvent(sourcedDeviceUpnp));
     }
 
     public void onMediaRendererAction(MediaRenderer mediaRenderer, String actionName, Map<String, String> args) {

@@ -63,6 +63,7 @@ import com.comarch.android.upnp.ibcdemo.connectivity.Connector;
 import com.comarch.android.upnp.ibcdemo.connectivity.SerializedTaskWorker;
 import com.comarch.android.upnp.ibcdemo.connectivity.busevent.NotifyWithDevicesEvent;
 import com.comarch.android.upnp.ibcdemo.connectivity.common.BaseSensorPooling.SensorPoolingObserver;
+import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppAVTGetProtocolInfoEvent;
 import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppChatMessageRecivedEvent;
 import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppDevicePropertyChanged;
 import com.comarch.android.upnp.ibcdemo.connectivity.xmpp.busevent.XmppExceptionEvent;
@@ -185,6 +186,9 @@ SensorPoolingObserver{
         args.put("ObjectID", event.getDirectoryId());
         args.put("BrowseFlag", "BrowseDirectChildren");
         args.put("Filter", "*");
+        args.put("StartingIndex", "0");
+        args.put("RequestedCount", "0");
+        args.put("SortCriteria", "");
         
         SoapRequestIQ request = new SoapRequestIQ("Browse","urn:schemas-upnp-org:service:ContentDirectory:1",args);
         request.setTo(event.getMediaServer().getDescription().getJid());
@@ -192,7 +196,13 @@ SensorPoolingObserver{
         mediaServerListener.registerPacketIdWithDirId(request.getPacketID(), event.getDirectoryId());
         connection.sendPacket(request);
     }
-    
+
+    public void onEvent(final XmppAVTGetProtocolInfoEvent event){
+        SoapRequestIQ request = new SoapRequestIQ("GetProtocolInfo","urn:schemas-upnp-org:service:ConnectionManager:1",null);
+        request.setTo(event.getJid());
+        connection.sendPacket(request);
+    }
+
     public void onEvent(ControlPointNameChanged event){
     	if(connection!=null && connection.isConnected()){
             Presence p = new Presence(Presence.Type.available, event.getName(), 42, Mode.available);

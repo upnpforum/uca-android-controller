@@ -6,7 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="about_content"><![CDATA[
         <h1>IBC Demo Controller</h1>  
-               IBC Demo UPnP Control Point application, v1.2<br/><br/>
+               IBC Demo UPnP Control Point application, v1.3<br/><br/>
                <br />
                Play designed by Björn Andersson licesed on CC-BY 3.0 license (https://creativecommons.org/licenses/by/3.0/) <br /><br />
                Server designed by Sergio Luna licesed on CC-BY 3.0 license (https://creativecommons.org/licenses/by/3.0/) <br /><br />

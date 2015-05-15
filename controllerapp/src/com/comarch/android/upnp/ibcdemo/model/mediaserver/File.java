@@ -49,9 +49,9 @@ import com.comarch.android.upnp.ibcdemo.XmlUtils;
 
 public class File extends Resource{
 
-    private final static String DIDL_NS = "urn:schemas-upnp-org:metadata-1-0/DIDL-Lite";
-    private final static String DC_NS = "http://purl.org/dc/elements/1.1";
-    private final static String UPNP_NS = "urn:schemas-upnp-org:metadata-1-0/upnp";
+    private final static String DIDL_NS = "urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/";
+    private final static String DC_NS = "http://purl.org/dc/elements/1.1/";
+    private final static String UPNP_NS = "urn:schemas-upnp-org:metadata-1-0/upnp/";
     private final String TAG = getClass().getSimpleName();
     public enum Type{
         UNKNOWN,
@@ -140,9 +140,12 @@ public class File extends Resource{
             serializer.attribute(null, "xmlns:upnp", UPNP_NS);
             serializer.startTag(null, "item");
             serializer.attribute(null, "id", id);
+            serializer.attribute(null, "parentID", parentId);
+            serializer.attribute(null, "restricted", "0");
             addNodeWithValue(serializer, "dc:title", name,null);
             addNodeWithValue(serializer, "dc:date", getCreateDate(),null);
-            addNodeWithValue(serializer, "res", uri,getProperties());
+            addNodeWithValue(serializer, "upnp:class", "object.item",null);
+            addNodeWithValue(serializer, "res", uri, getProperties());
             serializer.endTag(null, "item");
             serializer.endTag(null, "DIDL-Lite");
             serializer.endDocument();

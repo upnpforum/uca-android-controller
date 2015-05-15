@@ -54,7 +54,9 @@ public interface Callback {
     public void finishFragment();
     
     public void browseMediaServerDirectory(MediaServer mediaServer,String dirId,String parentId);
-    
+
+    public void getProtocolInfo(SourcedDeviceUpnp sourcedDeviceUpnp);
+
     public void performMediaRendererAction(MediaRenderer mediaRenderer,String actionName,Map<String,String> args);
     
     public void performMediaRendererAction(MediaRenderer mediaRenderer,String actionName,Map<String,String> args,UpnpActionCallback callback);
